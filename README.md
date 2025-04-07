@@ -39,10 +39,11 @@ Each of these questions is addressed using data visualization, machine learning,
 
 ## 🧠 What I Did
 
-- Explored the frequency of stamp types and provinces through **visualizations**
-- Mapped amphora stamp discoveries across the Roman Empire
-- Trained a **Random Forest classifier** to predict the Roman province based on location
-- Evaluated model accuracy and explored **edge case predictions**
+- Performed exploratory data analysis (EDA) using reusable, well-documented functions
+- Visualized amphora stamp frequency and mapped geographic distribution
+- Trained a modular, reusable Random Forest model to predict province from coordinates
+- Applied the DRY (Don't Repeat Yourself) principle using functions with clear docstrings
+- Explored and interpreted **unexpected model behavior**, using domain knowledge and critical thinking
 
 ---
 
@@ -51,6 +52,14 @@ Each of these questions is addressed using data visualization, machine learning,
 - Model achieved **99.75% accuracy**
 - Most predictions aligned well with historical geography
 - Some test cases gave **surprising results** (e.g., multiple regions predicted as *Arabia*) — which turned out to be the **most interesting part** of the project, raising questions about data distribution and historical interpretation
+
+---
+
+## 🧰 Code Quality & Best Practices
+
+- Code is modular and DRY-compliant
+- All functions are reusable and documented with docstrings
+- Clear separation between EDA, modeling, and evaluation steps
 
 ---
 
