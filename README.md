@@ -81,5 +81,5 @@ To run locally:
 
 - Dataset by [Rubio et al. (2018)](https://doi.org/10.1016/j.jas.2018.02.010)
 - Hosted by the CEIPAC project
-- Created for Udacity’s Data Analyst Nanodegre course
+
 
