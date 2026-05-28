@@ -1,85 +1,163 @@
-# 🏺 Amphora Stamps — A CRISP-DM Analysis of Roman Trade
+# Amphora Stamps — Computational Analysis of Roman Trade Networks
 
-This project uses machine learning to analyze a dataset of Roman amphora stamps, following the **CRISP-DM** process. By predicting the provincial origin of stamped amphorae using only geographic coordinates, the project explores the role of data science in archaeology and historical reconstruction.
+![Python](https://img.shields.io/badge/Python-Data_Analysis-blue?style=for-the-badge&logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-Machine_Learning-orange?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Archaeology](https://img.shields.io/badge/Domain-Computational_Archaeology-8e44ad?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
----
+Computational analysis of Roman amphora stamp distributions using machine learning and spatial inference techniques.
 
-## 📁 Project Structure
-
-- `Amphora stamps.ipynb` — Jupyter Notebook with full CRISP-DM workflow: EDA, modeling, testing, and conclusions.
-- `stamps.csv` — The original dataset from [Rubio et al. 2018](https://github.com/xrubio/ecologyStamps).
-- `README.md` — This file.
-
----
-
-## 🔍 Dataset Description
-
-The dataset includes **24,085 amphora stamps** found at archaeological sites across the Roman Empire. Each record contains:
-- Coordinates (`lat`, `long`)
-- Stamp type
-- Site of discovery
-- Maker’s code
-- Roman province (`name`)
-
-Source: CEIPAC database, via [Rubio et al. (2018)](https://doi.org/10.1016/j.jas.2018.02.010)
+The project explores how geographic coordinates alone can be used to reconstruct patterns of provincial association across archaeological records from the Roman Empire.
 
 ---
 
-## 🔍 Questions Explored in This Project
+## Overview
 
-1. What are the most common amphora stamp types in the dataset?
-2. Which Roman provinces have the highest number of stamped amphorae?
-3. Can we accurately predict a stamp’s province using only its geographic location?
-4. How does the model perform when tested on known historical locations?
-5. What can we learn from incorrect or surprising predictions?
+This repository contains a machine learning analysis of amphora stamp data derived from the CEIPAC database and the work of Rubio et al. (2018).
 
-Each of these questions is addressed using data visualization, machine learning, and critical interpretation.
+Using spatial coordinates as predictive features, the project investigates whether provincial origin can be inferred from archaeological distribution patterns, while also examining anomalous or unexpected classifications as historically meaningful signals rather than simple model errors.
 
----
+The project combines:
 
-## 🧠 What I Did
-
-- Performed exploratory data analysis (EDA) using reusable, well-documented functions
-- Visualized amphora stamp frequency and mapped geographic distribution
-- Trained a modular, reusable Random Forest model to predict province from coordinates
-- Applied the DRY (Don't Repeat Yourself) principle using functions with clear docstrings
-- Explored and interpreted **unexpected model behavior**, using domain knowledge and critical thinking
+- exploratory spatial data analysis
+- supervised machine learning
+- geographic visualization
+- interpretive analysis of prediction uncertainty
+- computational approaches to historical reconstruction
 
 ---
 
-## ✅ Key Results
+## Repository Structure
 
-- Model achieved **99.75% accuracy**
-- Most predictions aligned well with historical geography
-- Some test cases gave **surprising results** (e.g., multiple regions predicted as *Arabia*) — which turned out to be the **most interesting part** of the project, raising questions about data distribution and historical interpretation
+```text
+.
+├── Amphora stamps.ipynb
+├── stamps.csv
+└── README.md
+```
+
+| File | Description |
+|---|---|
+| `Amphora stamps.ipynb` | Full computational workflow including EDA, preprocessing, modeling, evaluation, and interpretation |
+| `stamps.csv` | Archaeological amphora stamp dataset |
+| `README.md` | Project documentation |
 
 ---
 
-## 🧰 Code Quality & Best Practices
+## Dataset
 
-- Code is modular and DRY-compliant
-- All functions are reusable and documented with docstrings
-- Clear separation between EDA, modeling, and evaluation steps
+The dataset contains approximately **24,000 amphora stamp records** collected from archaeological contexts across the Roman Empire.
+
+Features include:
+
+- latitude and longitude coordinates
+- stamp classifications
+- site identifiers
+- maker codes
+- Roman provincial attribution
+
+### Source
+
+Rubio-Campillo, X. et al. (2018)
+
+> Simulating archaeological data and processes: A case study of Roman amphora stamps.
+
+DOI:
+https://doi.org/10.1016/j.jas.2018.02.010
+
+Original repository:
+https://github.com/xrubio/ecologyStamps
 
 ---
 
-## 🗺️ How to Run
+## Methodological Approach
 
-This project uses:
+The workflow includes:
+
+- spatial exploratory data analysis
+- geographic frequency visualization
+- preprocessing and feature selection
+- Random Forest classification
+- predictive evaluation on archaeological locations
+- interpretive analysis of anomalous predictions
+
+Particular attention was given to separating:
+
+- descriptive analysis
+- predictive modeling
+- interpretive historical reasoning
+
+rather than treating model output as automatically authoritative.
+
+---
+
+## Key Findings
+
+- Geographic coordinates alone produced strong predictive performance for provincial attribution.
+- Spatial clustering patterns aligned closely with known historical geography.
+- Several unexpected classifications emerged in specific regions, suggesting:
+  - uneven data density
+  - overlapping trade influence
+  - historical ambiguity
+  - or latent structure within the dataset itself.
+
+Rather than discarding anomalous outputs, the project treats them as exploratory signals worthy of further historical investigation.
+
+---
+
+## Technical Stack
+
+- Python
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
+- Jupyter Notebook
+
+---
+
+## Running the Project
+
+### Requirements
+
 - Python 3.x
 - Jupyter Notebook
-- pandas, scikit-learn, seaborn, matplotlib
 
-To run locally:
-1. Download `stamps.csv` from [this repository](https://github.com/xrubio/ecologyStamps/blob/master/data/stamps.csv)
-2. Open the notebook `Amphora stamps.ipynb`
-3. Run each cell in order
+### Installation
+
+```bash
+pip install pandas scikit-learn matplotlib seaborn notebook
+```
+
+### Launch
+
+```bash
+jupyter notebook
+```
+
+Then open:
+
+```text
+Amphora stamps.ipynb
+
+```
 
 ---
 
-## 🙏 Acknowledgments
+## Research Perspective
 
-- Dataset by [Rubio et al. (2018)](https://doi.org/10.1016/j.jas.2018.02.010)
-- Hosted by the CEIPAC project
+This repository is part of a broader interest in computational humanities and AI-assisted exploratory analysis for historical datasets.
+
+The goal is not simply predictive accuracy, but the use of machine learning systems as tools for structured historical inquiry and interpretive exploration.
+
+---
+
+## Acknowledgments
+
+Dataset and original archaeological framework:
+
+Rubio-Campillo, X. et al. (2018)
+
+CEIPAC — Centre for the Study of Provincial Interdependence in Classical Antiquity
 
 
